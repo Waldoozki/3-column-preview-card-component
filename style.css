@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --font-text: 'Lexend Deca', sans-serif;
+  --font-tilte: 'Big Shoulders Display', cursive;
+}
+body {
+  font-family: var(--font-text);
+  color: var(--Transparent-white);
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+}
+.main__container {
+  margin: auto;
+  width: 90%;
+  max-width: 920px;
+  display: flex;
+  justify-content: space-between;
+}
+.main__card {
+  padding: 60px 0;
+}
+.main__card--sedans {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+.main__card--suvs {
+  background-color: var(--Dark-cyan);
+}
+.main__card--luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.card__icon {
+  display: inline-block;
+  width: 64px;
+  height: 40px;
+}
+.subtitle {
+  font-family: var(--font-tilte);
+  color: var(--Very-light-gray);
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-weight: 300;
+  line-height: 1.5;
+  padding-bottom: 15px;
+}
+.botton {
+  text-decoration: none;
+  background-color: var(--Very-light-gray);
+  width: 150px;
+  text-align: center;
+  padding: 15px 0;
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 30px;
+  font-weight: 600;
+}
+.botton:hover {
+  background: none;
+  color: var(--Very-light-gray);
+  transition: .3s ease-in;
+}
+.botton__sedans {
+  color: var(--Bright-orange);
+}
+.botton__suvs {
+  color: var(--Dark-cyan);
+}
+.botton__luxury {
+  color: var(--Very-dark-cyan);
+}
+@media (max-width: 810px) {
+  .main__container {
+    flex-direction: column;
+    padding: 60px 0;
+  }
+  .container {
+    width: 80%;
+  }
+  .main__card--sedans {
+    border-radius: 10px 10px 0 0;
+  }
+  .main__card--luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
+/* FINISH */
